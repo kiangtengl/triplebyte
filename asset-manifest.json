@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/triplebyte/static/js/main.733a11a8.chunk.js",
-    "main.js.map": "/triplebyte/static/js/main.733a11a8.chunk.js.map",
-    "runtime~main.js": "/triplebyte/static/js/runtime~main.16b3dbe0.js",
-    "runtime~main.js.map": "/triplebyte/static/js/runtime~main.16b3dbe0.js.map",
-    "static/js/2.a29fad67.chunk.js": "/triplebyte/static/js/2.a29fad67.chunk.js",
-    "static/js/2.a29fad67.chunk.js.map": "/triplebyte/static/js/2.a29fad67.chunk.js.map",
-    "index.html": "/triplebyte/index.html",
-    "precache-manifest.44ce09bb76e0545feff20a5e121bc710.js": "/triplebyte/precache-manifest.44ce09bb76e0545feff20a5e121bc710.js",
-    "service-worker.js": "/triplebyte/service-worker.js"
+    "main.js": "/static/js/main.49b2f226.chunk.js",
+    "main.js.map": "/static/js/main.49b2f226.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.ea6167e0.chunk.js": "/static/js/2.ea6167e0.chunk.js",
+    "static/js/2.ea6167e0.chunk.js.map": "/static/js/2.ea6167e0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.285c17a9b53da479ef47d1609b276a54.js": "/precache-manifest.285c17a9b53da479ef47d1609b276a54.js",
+    "service-worker.js": "/service-worker.js"
   }
 }
