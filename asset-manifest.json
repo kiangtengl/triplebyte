@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/triplebyte/static/js/main.bd970c5f.chunk.js",
-    "main.js.map": "/triplebyte/static/js/main.bd970c5f.chunk.js.map",
+    "main.js": "/triplebyte/static/js/main.f830b472.chunk.js",
+    "main.js.map": "/triplebyte/static/js/main.f830b472.chunk.js.map",
     "runtime~main.js": "/triplebyte/static/js/runtime~main.16b3dbe0.js",
     "runtime~main.js.map": "/triplebyte/static/js/runtime~main.16b3dbe0.js.map",
-    "static/js/2.0525fcb6.chunk.js": "/triplebyte/static/js/2.0525fcb6.chunk.js",
-    "static/js/2.0525fcb6.chunk.js.map": "/triplebyte/static/js/2.0525fcb6.chunk.js.map",
+    "static/js/2.461f0a25.chunk.js": "/triplebyte/static/js/2.461f0a25.chunk.js",
+    "static/js/2.461f0a25.chunk.js.map": "/triplebyte/static/js/2.461f0a25.chunk.js.map",
     "index.html": "/triplebyte/index.html",
-    "precache-manifest.ac2918f0726b1a05d31c771e97c17793.js": "/triplebyte/precache-manifest.ac2918f0726b1a05d31c771e97c17793.js",
+    "precache-manifest.79c243c5d2b83c559cbed8c9c4e520a7.js": "/triplebyte/precache-manifest.79c243c5d2b83c559cbed8c9c4e520a7.js",
     "service-worker.js": "/triplebyte/service-worker.js"
   }
 }
