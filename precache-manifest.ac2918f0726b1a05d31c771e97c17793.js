@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d979639ce94f8cc1db8dd55404656a5d",
+    "revision": "ce2faa63fa2d36f721d473e099b34e16",
     "url": "/triplebyte/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/triplebyte/static/js/2.0525fcb6.chunk.js"
   },
   {
-    "revision": "b71d9b2727b60156cb4f",
-    "url": "/triplebyte/static/js/main.dde22ede.chunk.js"
+    "revision": "0ea6abb32fdae3a6a7be",
+    "url": "/triplebyte/static/js/main.bd970c5f.chunk.js"
   },
   {
     "revision": "a732cf02662c4c40592b",
