@@ -1,12 +1,13 @@
 import theme from "@/infrastructure/theme";
 import { render, RenderOptions } from "@testing-library/react";
-import { createMemoryHistory } from "history";
+import { createMemoryHistory, History } from "history";
 import React, { Reducer } from "react";
 import { Provider } from "react-redux";
 import { Router } from "react-router";
 import { createStore } from "redux";
 import { ThemeProvider } from "styled-components";
 import { Omit } from "utility-types";
+import createRootState from "./rootState";
 
 interface CustomOptions extends Omit<RenderOptions, "queries"> {
   reducer?: Reducer<any, any>;
@@ -14,24 +15,22 @@ interface CustomOptions extends Omit<RenderOptions, "queries"> {
   route?: string;
 }
 
-const defaultOptions = {
+const createDefaultOptions = (history: History) => ({
   reducer: (state: any, _action: any) => state,
-  defaultState: {},
-  route: "/"
-};
+  defaultState: createRootState(history)
+});
 
-const customRender = (
-  ui: React.ReactElement,
-  options: CustomOptions = defaultOptions
-) => {
+const customRender = (ui: React.ReactElement, options: CustomOptions = {}) => {
+  const history = createMemoryHistory({
+    initialEntries: [options.route || "/"]
+  });
+
+  const defaultOptions = createDefaultOptions(history);
+
   const store = createStore(
     options.reducer! || defaultOptions.reducer,
     options.defaultState || defaultOptions.defaultState
   );
-
-  const history = createMemoryHistory({
-    initialEntries: [options.route || defaultOptions.route]
-  });
 
   const Providers: React.FC = ({ children }) => {
     return (
