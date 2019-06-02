@@ -6,7 +6,9 @@ import createRootReducer from "./rootReducer";
 import rootSaga from "./rootSaga";
 import createRootState from "./rootState";
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({
+  basename: process.env.NODE_ENV === "production" ? "/triplebyte" : "/"
+});
 
 const compose =
   (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || baseCompose;

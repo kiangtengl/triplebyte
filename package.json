@@ -2,6 +2,7 @@
   "name": "triplebyte",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kiangtengl.github.io/triplebyte/",
   "dependencies": {
     "@craco/craco": "^5.2.1",
     "@types/redux-saga": "^0.10.5",
@@ -30,7 +31,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

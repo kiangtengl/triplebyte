@@ -11,8 +11,8 @@
     ".vscode": true,
     // ".*": true,
     "yarn-error.log": true,
-    "yarn.lock": true,
+    "yarn.lock": true
     // "*.json": true,
-    "craco.config.js": true
+    // "craco.config.js": true
   }
 }

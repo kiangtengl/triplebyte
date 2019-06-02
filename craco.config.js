@@ -27,7 +27,12 @@ module.exports = {
         "^testUtils$": "<rootDir>/src/infrastructure/testUtils"
       },
       moduleFileExtensions: ["js", "jsx", "json", "ts", "tsx"],
-      collectCoverage: true
+      collectCoverage: true,
+      collectCoverageFrom: [
+        "**/*.{ts,tsx}",
+        "!**/node_modules/**",
+        "!**/vendor/**"
+      ]
     }
   }
 };
