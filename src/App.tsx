@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import theme from "@/infrastructure/theme";
+import { ConnectedRouter } from "connected-react-router";
+import React from "react";
+import { hot } from "react-hot-loader";
+import { Provider } from "react-redux";
+import { ThemeProvider } from "styled-components";
+import { configureStore, history } from "./infrastructure";
+import AppRoutes from "./pages/AppRoutes";
+
+const store = configureStore(history);
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <AppRoutes />
+        </ConnectedRouter>
+      </Provider>
+    </ThemeProvider>
   );
-}
+};
 
-export default App;
+export default hot(module)(App);
