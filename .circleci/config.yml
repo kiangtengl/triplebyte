@@ -46,16 +46,10 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run:
-          name: Install deployment dependencies
-          command: |
-              npm install -g --silent gh-pages
-              git config --global user.email "$GH_EMAIL"
-              git config --global user.name "$GH_NAME"
-      - run:
-          name: Deploy
-          command: |
-              gh-pages -d build
+      - run: npm install -g gh-pages
+      - run: git config --global user.email "$GH_EMAIL"
+      - run: git config --global user.name "$GH_NAME"
+      - run: gh-pages -d build
 workflows:
   version: 2
   build_accept_deploy:
