@@ -4,8 +4,6 @@
   "private": true,
   "homepage": "https://kiangtengl.github.io/triplebyte/",
   "dependencies": {
-    "@craco/craco": "^5.2.1",
-    "@types/redux-saga": "^0.10.5",
     "connected-react-router": "^6.4.0",
     "history": "^4.9.0",
     "immer": "^3.1.2",
@@ -60,6 +58,9 @@
     "@types/react-redux": "^7.0.9",
     "@types/react-router": "^5.0.1",
     "@types/styled-components": "^4.1.15",
-    "craco-plugin-react-hot-reload": "^0.0.3"
+    "craco-plugin-react-hot-reload": "^0.0.3",
+    "@craco/craco": "^5.2.1",
+    "@types/redux-saga": "^0.10.5",
+    "gh-pages": "^2.0.1"
   }
 }
