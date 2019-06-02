@@ -42,7 +42,11 @@ jobs:
       - run: npm run test
   deploy-github:
     <<: *defaults
+
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "0b:f2:26:42:29:2c:5b:67:e2:3f:52:b1:85:73:88:03"
       - checkout
       - attach_workspace:
           at: .
