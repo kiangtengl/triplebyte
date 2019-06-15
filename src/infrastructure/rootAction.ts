@@ -1,5 +1,5 @@
-import { userActions } from "@/features/user";
+import { cardActions } from "@/features/cards";
 import { RouterAction } from "connected-react-router";
 import { ActionType } from "typesafe-actions";
 
-export type RootAction = ActionType<typeof userActions> | RouterAction;
+export type RootAction = ActionType<typeof cardActions> | RouterAction;

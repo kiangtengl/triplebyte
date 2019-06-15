@@ -1,42 +1,38 @@
-import { userActions, userSelectors } from "@/features/user";
+import CardList from "@/components/CardList";
+import { cardSelectors } from "@/features/cards";
 import { RootState } from "@/infrastructure";
 import { styled } from "@/infrastructure/theme";
-import React, { useCallback } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
-const StyledDiv = styled.div`
-  color: ${p => p.theme.primary};
-`;
-
 const mapStateToProps = (s: RootState) => ({
-  user: userSelectors.user(s)
+  columns: cardSelectors.cards(s)
 });
 
-const dispatchProps = {
-  setUser: userActions.set
-};
+type Props = ReturnType<typeof mapStateToProps>;
 
-type Props = typeof dispatchProps;
+const Page = styled.div`
+  width: 100%;
+  height: 100%;
 
-function Home({ setUser }: Props) {
-  const onChange = useCallback(
-    e => {
-      setUser({
-        name: e.target.value
-      });
-    },
-    [setUser]
-  );
+  flex-grow: 1;
 
+  display: flex;
+  flex-direction: row;
+
+  font-family: sans-serif;
+
+  background-color: #eceeee;
+`;
+
+function Home({ columns }: Props) {
   return (
-    <StyledDiv>
-      <div>Hi</div>
-      <input onChange={onChange} />
-    </StyledDiv>
+    <Page>
+      {columns.map(col => (
+        <CardList {...col} />
+      ))}
+    </Page>
   );
 }
 
-export default connect(
-  mapStateToProps,
-  dispatchProps
-)(Home);
+export default connect(mapStateToProps)(Home);

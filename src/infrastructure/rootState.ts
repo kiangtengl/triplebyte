@@ -1,10 +1,10 @@
-import { userConstants, UserState } from "@/features/user";
+import { cardConstants, CardState } from "@/features/cards";
 import { RouterState } from "connected-react-router";
 import { History } from "history";
 
 export interface RootState {
   router: RouterState;
-  [userConstants.namespace]: UserState;
+  cards: CardState;
 }
 
 const createRootState = (history: History): RootState => ({
@@ -12,7 +12,7 @@ const createRootState = (history: History): RootState => ({
     location: history.location,
     action: history.action
   },
-  [userConstants.namespace]: userConstants.defaultState
+  cards: cardConstants.defaultState
 });
 
 export default createRootState;

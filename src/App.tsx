@@ -4,6 +4,7 @@ import React from "react";
 import { hot } from "react-hot-loader";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
+import "./app.css";
 import { configureStore, history } from "./infrastructure";
 import AppRoutes from "./pages/AppRoutes";
 
