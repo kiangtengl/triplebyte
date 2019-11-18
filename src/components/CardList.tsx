@@ -41,11 +41,13 @@ const CardHeader = styled.p`
 `;
 
 function CardList(p: Props) {
+  const { addCard, column } = p;
+
   const onClick = useCallback(() => {
     const title = window.prompt("Title for your card") || "";
 
-    p.addCard({ title, col: p.column });
-  }, []);
+    addCard({ title, col: column });
+  }, [addCard, column]);
 
   return (
     <ListWrapper>
@@ -70,7 +72,4 @@ function CardList(p: Props) {
   );
 }
 
-export default connect(
-  null,
-  dispatchProps
-)(CardList);
+export default connect(null, dispatchProps)(CardList);

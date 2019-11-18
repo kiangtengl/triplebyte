@@ -49,7 +49,7 @@ export function Card(p: Props) {
       direction: MoveCardDirection.left,
       cardNumber
     });
-  }, [column]);
+  }, [column, cardNumber, moveCard]);
 
   const moveRight = useCallback(() => {
     moveCard({
@@ -57,7 +57,7 @@ export function Card(p: Props) {
       direction: MoveCardDirection.right,
       cardNumber
     });
-  }, [column]);
+  }, [column, cardNumber, moveCard]);
 
   return (
     <CardWrapper>
@@ -70,7 +70,4 @@ export function Card(p: Props) {
   );
 }
 
-export default connect(
-  null,
-  dispatchProps
-)(Card);
+export default connect(null, dispatchProps)(Card);
